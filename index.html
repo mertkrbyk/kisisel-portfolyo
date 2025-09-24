@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mert Karabıyık</title>
+  <link rel="stylesheet" href="css/stayle.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#hakkimda">Hakkımda</a>
+    <a href="#egitim">Eğitim</a>
+    <a href="#hobiler">Hobiler</a>
+    <a href="#yetenekler">Yetenekler</a>
+    <a href="#projeler">Projeler</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero card">
+    <h1>Merhaba, Ben Mert Karabıyık</h1>
+    <p>Bilgisayar Mühendisliği Öğrencisi & Web Geliştirici Adayı</p>
+  </header>
+
+  <!-- HAKKIMDA -->
+  <section id="hakkimda" class="card">
+    <h2>Hakkımda</h2>
+    <p>Ben Mert Karabıyık. 2008 yılında İstanbulda’da doğdum. Şu anda Ejot Tezmak'da staj yapıyorum ve kendimi yazılım geliştirme alanında geliştirmeye çalışıyorum. Özellikle web teknolojilerine ilgi duyuyorum.</p>
+  </section>
+
+  <!-- EĞİTİM -->
+  <section id="egitim" class="card">
+    <h2>Eğitim</h2>
+    <p>Lise eğitimimi Çerkezköyde görüyorum. Şu anda <strong>Bilişim teklonojileri</strong> bölümünde öğrenciyim.</p>
+  </section>
+
+  <!-- HOBİLER -->
+  <section id="hobiler" class="card">
+    <h2>Hobilerim</h2>
+    <div class="hobbies-container">
+      <div class="hobby-card">
+        <img src="images/gameplay.jpg" alt="Oyun Oynamak">
+        <h3>Oyun Oynamak</h3>
+        <p>Sevdiğim oyunlar: The Last of Us, GTA V, Minecraft</p>
+      </div>
+      <div class="hobby-card">
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=500&q=60" alt="Kitap Okumak">
+        <h3>Kitap Okumak</h3>
+        <p>En çok sevdiğim türler: Bilim Kurgu, Klasikler, Macera</p>
+      </div>
+      <div class="hobby-card">
+        <img src="images/spor.png" alt="Spor Yapmak"> <h3>Spor Yapmak</h3>
+        <p>Futbol ve koşu yapmayı seviyorum</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- YETENEKLER -->
+  <section id="yetenekler" class="card">
+    <h2>Yetenekler</h2>
+    <ul>
+      <li>HTML / CSS</li>
+      <li>Basit düzey JS</li>
+      <li>C#</li>
+      <li>MVC</li>
+    </ul>
+  </section>
+
+  <!-- PROJELER -->
+  <section id="projeler" class="card">
+    <h2>Projeler</h2>
+    <div class="projects-container">
+
+      <!-- Proje Kart 1 -->
+      <div class="project-card card">
+        <h3>Kişisel Web Sitesi</h3>
+        <p class="card-text">Kendimi tanıtmak için yaptığım basit web sitesi.</p>
+        <button class="btn btn-dark toggle-btn">Detayları Göster</button>
+      </div>
+
+      <!-- Proje Kart 2 -->
+      <div class="project-card card">
+        <h3>Staj Takip Sistemi</h3>
+        <p class="card-text">Proje ödevim için yaptığım araba satış sitesi.</p>
+        <button class="btn btn-dark toggle-btn">Detayları Göster</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- İLETİŞİM -->
+  <section id="iletisim" class="card">
+    <h2>İletişim</h2>
+    <p>Email: <a href="mailto:Karabiyikmert55@gmail.com">karabiyikmert55@gmail.com</a></p>
+    <p>Telefon: <a href="tel:+905438807286">+90 543 880 72 86</a></p>
+    <p>Adres: Tekirdağ, Çerkezköy, Türkiye</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="card">
+    <p>© 2025 Mert Karabıyık | Tüm Hakları Saklıdır</p>
+  </footer>
+
+  <!-- JS Kodları -->
+  <script>
+    const buttons = document.querySelectorAll('.toggle-btn');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const card = btn.closest('.project-card');
+        card.classList.toggle('expanded');
+
+        const description = card.querySelector('.card-text');
+        if(card.classList.contains('expanded')) {
+          description.style.display = 'block';
+          btn.textContent = 'Detayı Gizle';
+        } else {
+          description.style.display = 'none';
+          btn.textContent = 'Detayları Göster';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
